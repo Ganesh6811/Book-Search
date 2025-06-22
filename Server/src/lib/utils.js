@@ -7,9 +7,10 @@ const generateToken = async (userData, res) => {
     }, process.env.JWT_SECREATE_KEY, { expiresIn: "7d" });
 
     res.cookie("jwt",  token, {
-        maxAge: 7 * 24 * 60 * 60 * 1000,
         httpOnly: true,
-        sameSite: "strict",
+        secure: true,          
+        sameSite: "None",       
+        maxAge: 7 * 24 * 60 * 60 * 1000, 
     });
 };
 
