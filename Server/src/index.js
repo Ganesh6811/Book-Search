@@ -16,7 +16,7 @@ const port = process.env.PORT;
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(cors({ 
-    origin: "http://localhost:5173", 
+    origin: "https://booksearch-319j.onrender.com", 
     methods:["GET", "POST", "PUT", "DELETE"],
     credentials:true,
     allowedHeaders: ["Content-Type", "Authorization"],
